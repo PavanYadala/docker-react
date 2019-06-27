@@ -6,4 +6,4 @@ before_install:
   - docker build -t pavan26devops/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run pavan26devops/docker-react npm run test -- --coverage 
+  - docker run -e CI=true pavan26devops/docker-react npm run test -- --coverage 
